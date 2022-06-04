@@ -1,5 +1,6 @@
-import {useParams} from 'react-router-dom';
-import {LIST_COMPANY} from '../data/Data';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getCompany } from '../api/API';
 
 /**
  * Компонент карточки компании
@@ -7,12 +8,28 @@ import {LIST_COMPANY} from '../data/Data';
  */
 function CardCompany() {
     const {id} = useParams();
+    const [company, setCompany] = useState(null);
+
+    useEffect(() => {
+        getCompany(Number(id)).then((response: any) => {
+            setCompany(response.data.company[0]);
+        });
+    }, []);
+
     return (
-      <>
-        Компонент карточки {id}
-      </>
+        <>
+            {company && (
+                <>
+                    <p>Наименование компании: {company['name']}</p>
+                    <p>ОГРН: {company['reg_number']}</p>
+                    <p>Тип компании: {company['type']}</p>
+                    <p>Дата регистрации: {company['reg_date']}</p>
+                    <p>Активность: {company['active'] ? 'зафиксирована' : 'отсуствует'}</p>
+                </>
+            )}
+        </>
     );
-  }
-  
-  export default CardCompany;
+}
+
+export default CardCompany;
   
