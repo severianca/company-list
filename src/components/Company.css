@@ -1,0 +1,6 @@
+.company_wrap {
+    border: 4px double black;
+    background: rgb(220, 255, 255);
+    padding: 10px;
+    margin: 20px;
+}
