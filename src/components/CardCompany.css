@@ -1,0 +1,8 @@
+.card_edit-button {
+    cursor: pointer;
+}
+
+.card_edit {
+    width: fit-content;
+    margin-top: 16px;
+}

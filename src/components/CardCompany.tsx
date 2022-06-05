@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCompany } from '../api/API';
+import { Link } from 'react-router-dom';
+
+import './CardCompany.css';
 
 /**
  * Компонент карточки компании
@@ -25,6 +28,9 @@ function CardCompany() {
                     <p>Тип компании: {company['type']}</p>
                     <p>Дата регистрации: {company['reg_date']}</p>
                     <p>Активность: {company['active'] ? 'зафиксирована' : 'отсуствует'}</p>
+                    <Link to={`/company/edit/${company['ID']}`} className="card_edit">
+                        <button className="card_edit-button">Редактировать</button>
+                    </Link>
                 </>
             )}
         </>

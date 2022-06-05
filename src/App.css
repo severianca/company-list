@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: fit-content; 
+  width: fit-content;
   height: 100vh;
   padding: 30px;
 }
