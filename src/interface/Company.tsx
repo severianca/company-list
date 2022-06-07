@@ -7,10 +7,28 @@
   * интерфей данных о компании
   */
  export interface ICompany {
-     ID: number;
-     name: string;
-     reg_number: number;
-     reg_date: string;
-     active: boolean;
-     type: TTypeCompany;
+    /**
+     * {number} Идентификтор компании
+     */
+    ID: number;
+    /**
+     * {string} Наименование компании
+     */
+    name: string;
+    /**
+     * {number} ОГРН
+     */
+    reg_number: number;
+    /**
+     * {string} Дата регистрации
+     */
+    reg_date: string;
+    /**
+     * {boolean} Флаг активности
+     */
+    active: boolean;
+    /**
+     * {TTypeCompany} Тип компании
+     */
+    type: TTypeCompany;
  }
