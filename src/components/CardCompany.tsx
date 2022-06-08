@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {getCompaniesAction} from '../store/companiesReducer';
 import {ICompany} from '../interface/Company';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import './CardCompany.css';
 

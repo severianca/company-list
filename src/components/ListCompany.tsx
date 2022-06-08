@@ -3,6 +3,8 @@ import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchCompanies} from '../store/companiesReducer';
 import {ICompany} from '../interface/Company';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import './ListCompany.css'
 

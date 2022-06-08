@@ -6,6 +6,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import {saveCompanyAction, getCompaniesAction} from '../store/companiesReducer';
 import {useEffect} from 'react';
 import {ICompany} from '../interface/Company';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import "react-datepicker/dist/react-datepicker.css";
 import './EditCompany.css';

@@ -2,6 +2,8 @@ import ListCompany from './components/ListCompany';
 import {Routes, Route} from 'react-router-dom';
 import CardCompany from './components/CardCompany';
 import EditCompany from './components/EditCompany';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import './App.css';
 
