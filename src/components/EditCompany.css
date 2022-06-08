@@ -1,0 +1,32 @@
+.wrap_form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+section > label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form_submit {
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.form_error {
+    display: flex;
+    flex-direction: row;
+}
+
+.form_error-message {
+    margin-left: 8px;
+    color: red;
+}
+  

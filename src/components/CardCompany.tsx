@@ -8,6 +8,11 @@ import {ICompany} from '../interface/Company';
 import './CardCompany.css';
 
 /**
+ * Данные отсутствуют
+ */
+const EMPTY_DATA: string = '-';
+
+/**
  * Компонент карточки компании
  * @returns 
  */
@@ -23,21 +28,25 @@ function CardCompany() {
 
     return (
         <>
-            {companies && companies.filter((company: ICompany) => company.ID === Number(id)).map((company: ICompany) => 
-                <>
-                    <p>Наименование компании: {company.name}</p>
-                    <p>ОГРН: {company.reg_number}</p>
-                    <p>Тип компании: {company.type}</p>
-                    <p>Дата регистрации: {company.reg_date}</p>
-                    <p>Активность: {company.active ? 'зафиксирована' : 'отсуствует'}</p>
-                    <Link to={`/company/edit/${company.ID}`} className="card_edit">
-                        <button className="card_edit-button">Редактировать</button>
-                    </Link>
-                </>
-            )}
+            {companies.length > 0
+                ?
+                companies.filter((company: ICompany) => company.ID === Number(id)).map((company: ICompany) => 
+                    <>
+                        <p>Наименование компании: {company.name}</p>
+                        <p>ОГРН: {company.reg_number}</p>
+                        <p>Тип компании: {company.type}</p>
+                        <p>Дата регистрации: {company.reg_date ? company.reg_date.toString() : EMPTY_DATA}</p>
+                        <p>Активность: {company.active ? 'зафиксирована' : 'отсуствует'}</p>
+                        <Link to={`/company/edit/${company.ID}`} className="card_edit">
+                            <button className="card_edit-button">Редактировать</button>
+                        </Link>
+                    </>
+                )
+                :
+                <div>Данные компании не получены</div>
+            }
         </>
     );
 }
 
 export default CardCompany;
-  
