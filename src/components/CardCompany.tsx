@@ -19,8 +19,14 @@ const EMPTY_DATA: string = '-';
  * @returns 
  */
 function CardCompany() {
+    /**
+     * Идентификатор компании, карточку которой открыли
+     */
     const {id} = useParams();
 
+    /**
+     * Данные о компаниях из store
+     */
     const companies = useSelector((state: any) => state.companiesReducer.companies);
     const dispatch = useDispatch();
 

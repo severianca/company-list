@@ -17,7 +17,7 @@ import './EditCompany.css';
  */
 function EditCompany() {
     /**
-     * Идентификатор компании, карточку которой открыли
+     * Идентификатор компании, карточку редактирования которой открыли
      */
     const {id} = useParams();
     
@@ -32,6 +32,9 @@ function EditCompany() {
     const companies = useSelector((state: any) => state.companiesReducer.companies);
     const dispatch = useDispatch();
 
+    /**
+     * Константы для работы с формой
+     */
     const {
         register,
         formState: {

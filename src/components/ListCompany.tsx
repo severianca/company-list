@@ -12,6 +12,9 @@ import './ListCompany.css'
  * Компонент отображает список компаний
  */
 function ListCompany() {
+    /**
+     * Данные о всех компаниях из store
+     */
     const companies = useSelector((state: any) => state.companiesReducer.companies);
     const dispatch = useDispatch();
 

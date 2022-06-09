@@ -4,7 +4,7 @@
  type TTypeCompany = 'ООО' | 'ИП';
 
  /**
-  * интерфей данных о компании
+  * интерфейc данных о компании
   */
  export interface ICompany {
     /**
